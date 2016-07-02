@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MycroftCore-Android</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_aim">The aim of this simple application
+        is showing a couple of techniques which could be used
+        to load external code from a remote or a local path
+        dynamically.</string>
+    <string name="title_activity_dex_class_sample">DexClassLoader with a .jar container</string>
+    <string name="explanation_dex_load_jar">Here it is shown a small example
+        of a Java class, loaded dynamically through DexClassLoader from a jar container.
+        \nIts methods are used to rearrange and modify the graphical components in this screen..
+        \nGuess what you should do now ;)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn_dex_load_jar">Click me!</string>
+    <string name="switch_dex_load_jar">Switch</string>
+    <string name="title_activity_loaded_dynamically">Dynamically loaded activity</string>
+</resources>
