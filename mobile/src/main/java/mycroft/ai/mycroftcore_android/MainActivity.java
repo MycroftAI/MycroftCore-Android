@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loadClass(this, "wikipedia", "wikipedia");
+        loadExtension(this, "wikipedia", "wikipedia");
     }
 
     @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static void loadClass(Context context, String apkFile, String packageName) {
+    public static void loadExtension(Context context, String apkFile, String packageName) {
         Log.i(TAG, "Trying to load new class from apk.");
         final File dexInternalStoragePath = new File(context.getDir("extensions", Context.MODE_PRIVATE),
                 apkFile + ".apk");
