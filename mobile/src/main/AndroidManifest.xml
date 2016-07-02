@@ -23,13 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DexClassSampleActivity"
-            android:label="@string/title_activity_dex_class_sample"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="keyboardHidden|orientation|screenSize" >
-        </activity>
 
         <meta-data
             android:name="com.google.android.gms.car.application"

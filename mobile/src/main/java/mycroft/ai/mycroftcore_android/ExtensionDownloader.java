@@ -20,6 +20,7 @@ public class ExtensionDownloader extends IntentService {
 
     public static final int UPDATE_PROGRESS = 8344;
 
+
     public ExtensionDownloader(String name) {
         super(name);
     }
