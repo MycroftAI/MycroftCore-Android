@@ -2,9 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "mycroft.ai.mycroftcore_android"
         minSdkVersion 21
         targetSdkVersion 24
@@ -28,4 +29,5 @@ dependencies {
     compile 'com.android.support:design:24.0.0'
     compile 'com.android.support:support-v4:24.0.0'
     compile 'com.android.support:support-v13:24.0.0'
+    compile 'com.android.support:multidex:1.0.1'
 }
