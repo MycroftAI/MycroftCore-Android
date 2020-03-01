@@ -23,11 +23,10 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.CarExtender;
-import android.support.v4.app.NotificationCompat.CarExtender.UnreadConversation;
-import android.support.v4.app.NotificationManagerCompat;
-import android.support.v4.app.RemoteInput;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.app.RemoteInput;
 
 public class MycroftMessagingService extends Service {
     public static final String READ_ACTION =
@@ -83,8 +82,8 @@ public class MycroftMessagingService extends Service {
 
         // Create the UnreadConversation and populate it with the participant name,
         // read and reply intents.
-        UnreadConversation.Builder unreadConvBuilder =
-                new UnreadConversation.Builder(participant)
+        NotificationCompat.CarExtender.UnreadConversation.Builder unreadConvBuilder =
+                new NotificationCompat.CarExtender.UnreadConversation.Builder(participant)
                         .setLatestTimestamp(timestamp)
                         .setReadPendingIntent(readPendingIntent)
                         .setReplyAction(replyIntent, remoteInput);
@@ -100,7 +99,7 @@ public class MycroftMessagingService extends Service {
                 .setWhen(timestamp)
                 .setContentTitle(participant)
                 .setContentIntent(readPendingIntent)
-                .extend(new CarExtender()
+                .extend(new NotificationCompat.CarExtender()
                         .setUnreadConversation(unreadConvBuilder.build()));
 
         mNotificationManager.notify(conversationId, builder.build());
