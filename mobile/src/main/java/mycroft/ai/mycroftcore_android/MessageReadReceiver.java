@@ -19,8 +19,9 @@ package mycroft.ai.mycroftcore_android;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
+
+import androidx.core.app.NotificationManagerCompat;
 
 public class MessageReadReceiver extends BroadcastReceiver {
     private static final String TAG = MessageReadReceiver.class.getSimpleName();
